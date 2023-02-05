@@ -1,0 +1,42 @@
+.parent {
+    background-color: hsla(200, 100%, 20%);
+    height: 400px;
+    width: 400px;
+}
+
+/* APPLY TRANSITION TO THE BASE CLASS NOT THE HOVER */
+
+.child {
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    /* animation: name duration timing-function fill-mode; */
+    animation: left-to-right 1s ease-in forwards infinite alternate
+}
+
+.parent:hover .child {
+animation-play-state: paused;
+}
+
+/* DETERMINES WHAT OUR ANIMATION WILL LOOK LIKE BETWEEN THE VALUES 0% AND 100% */
+
+@keyframes left-to-right {
+    0% {
+        background-color: red;
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateY(100%);
+    }
+    50% {
+        background-color: blue;
+    }
+    66% {
+        transform: translateX(100%) translateY(100%);
+    }
+    100% {
+        background-color: green;
+        transform: translateX(100%);
+
+    }
+}

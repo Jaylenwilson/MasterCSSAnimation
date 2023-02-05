@@ -27,6 +27,7 @@ animation-play-state: paused;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .childcircle {
